@@ -4,40 +4,24 @@ import './index.css'
 
 
 
+const author = 'Dipen Shah'
+const title = 'The Intelligent Investor';
+const img = 'https://images-na.ssl-images-amazon.com/images/I/51fESaIGgVL._SX323_BO1,204,203,200_.jpg'
 function BookList() {
   return (
     <section className='bookList'>
-      <Book></Book>
-      <Book></Book>
-      <Book></Book>
-      <Book></Book>
-      <Book></Book>
-      <Book></Book>
-      <Book></Book>
-      <Book></Book>
-      <Book></Book>
+      <Book job="developer" />
+      <Book title='random title' number={22}/>
     </section>
   );
 }
-
-const Book = () => {
+const Book = (props) => {
+  console.log(props);
   return (<article className='book'>
-    <Image></Image>
-    <Title></Title>
-    <Author></Author>
+    <img src={img} alt={title}></img>
+    <h1>{title}</h1>
+    <h3>{author}</h3>
   </article>)
-}
-const Image = () => {
-  return (
-    <img src='https://images-na.ssl-images-amazon.com/images/I/51fESaIGgVL._SX323_BO1,204,203,200_.jpg'></img>
-  ) 
-}
-
-const Title = () => {
-  return <h1>The Intelligent Investory</h1>
-}
-const Author = () => {
-  return <h3>Dipen Shah</h3>
 }
 
 ReactDom.render(<BookList />, document.getElementById('root'));
