@@ -1,20 +1,43 @@
 import React from 'react';
 import ReactDom from 'react-dom'
+import './index.css'
 
 
 
-function Greeting() {
+function BookList() {
   return (
-    <React.Fragment>
-  <div>
-    <h4>HELLO WORLD</h4>
-  </div>
-  </React.Fragment>
+    <section className='bookList'>
+      <Book></Book>
+      <Book></Book>
+      <Book></Book>
+      <Book></Book>
+      <Book></Book>
+      <Book></Book>
+      <Book></Book>
+      <Book></Book>
+      <Book></Book>
+    </section>
   );
 }
 
-/* const Greeting = () => {
-  return React.createElement('div', {}, React.createElement('h4', {},'hello world'));
-} */
+const Book = () => {
+  return (<article className='book'>
+    <Image></Image>
+    <Title></Title>
+    <Author></Author>
+  </article>)
+}
+const Image = () => {
+  return (
+    <img src='https://images-na.ssl-images-amazon.com/images/I/51fESaIGgVL._SX323_BO1,204,203,200_.jpg'></img>
+  ) 
+}
 
-ReactDom.render(<Greeting />, document.getElementById('root'));
+const Title = () => {
+  return <h1>The Intelligent Investory</h1>
+}
+const Author = () => {
+  return <h3>Dipen Shah</h3>
+}
+
+ReactDom.render(<BookList />, document.getElementById('root'));
