@@ -4,7 +4,17 @@ import ReactDom from 'react-dom'
 
 
 function Greeting() {
-  return <h4>HELLO</h4>;
+  return (
+    <React.Fragment>
+  <div>
+    <h4>HELLO WORLD</h4>
+  </div>
+  </React.Fragment>
+  );
 }
 
-ReactDom.render(<Greeting/>, document.getElementById('root'));
+/* const Greeting = () => {
+  return React.createElement('div', {}, React.createElement('h4', {},'hello world'));
+} */
+
+ReactDom.render(<Greeting />, document.getElementById('root'));
