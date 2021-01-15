@@ -40,3 +40,7 @@ h1 {
   font-size: 0.75 rem;
   margin-top: 0.25rem;
 }
+
+.book p {
+  margin-top: 0.5rem;
+}
